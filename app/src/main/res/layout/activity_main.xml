@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgrou_for_registration"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:padding="10dp"
+            android:background="#777777"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_home_black_24dp" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="goRegistrationForm"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_add_circle_white_24dp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="launchList"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_view_list_white_24dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Realtime Count"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageView14"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:onClick="logout"
+                            app:srcCompat="@drawable/logout" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:onClick="logout"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="LogOut" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar4"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textStyle="bold"
+
+                    android:text="Entries Appearing Here are Realtime" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textview4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total"
+                        android:textAlignment="center"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/count_total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:background="@drawable/background_cound"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/blabla"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
+                        android:textColor="@android:color/black"
+                        android:gravity="center"
+                        android:text="Thirsty Coders"
+                        android:textAlignment="center"
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_thursty_coders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black"
+                        android:layout_weight="1"
+                        android:text="Thugs Of Codistan"
+
+                        android:textAlignment="center"
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_thugs_of_codistan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_cound"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black"
+
+                        android:layout_weight="1"
+                        android:text="Hackathon"
+                        android:textAlignment="center"
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_hackathon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/black"
+
+                        android:text="Bug Off"
+                        android:textAlignment="center"
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_bug_off"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_cound"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black"
+
+                        android:layout_weight="1"
+                        android:text="Hack The Money"
+                        android:textAlignment="center"
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_hack_the_mystrery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black"
+
+                        android:layout_weight="1"
+                        android:text="Beats"
+                        android:textAlignment="center"
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_beats"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/background_cound"
+
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black"
+
+                        android:layout_weight="1"
+                        android:text="Box Office"
+                        android:textAlignment="center"
+                        android:textSize="21dp"
+
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_box_office"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black"
+
+                        android:layout_weight="1"
+                        android:text="Stranger Things"
+
+                        android:textAlignment="center"
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_stranger_things"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_cound"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:textColor="@android:color/black"
+                        android:layout_weight="1"
+                        android:text="Secret Room"
+                        android:textAlignment="center"
+
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_secret_room"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/black"
+
+                        android:text="FIFA"
+                        android:textAlignment="center"
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_fifa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_cound"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="CS"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_cs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="May Mayers"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_may_mayers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_cound"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Bull's Eye"
+                        android:textColor="@android:color/black"
+
+                        android:textAlignment="center"
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:id="@+id/count_bulls_eye"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView38"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Food Tycon"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="21dp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/count_food_tycon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_cound"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Twister"
+                        android:textAlignment="center"
+                        android:textSize="21dp"
+                        android:textColor="@android:color/black"
+
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_twister"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView42"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Box And Lies"
+                        android:textAlignment="center"
+                        android:textSize="21dp"
+                        android:textColor="@android:color/black"
+
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/count_box_lies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_cound"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Spot Photo"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="21dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/code_spot_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="0"
+                        android:textSize="50dp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
