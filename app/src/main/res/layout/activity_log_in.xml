@@ -9,11 +9,12 @@
 
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="48dp"
+        android:id="@+id/imageView15"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dr_logo" />
@@ -23,7 +24,7 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="18dp"
         android:layout_marginEnd="16dp"
         android:autofillHints=""
         android:background="@drawable/backgroun_textview"
@@ -34,14 +35,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
 
     <EditText
         android:id="@+id/password_login_activity"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/backgroun_textview"
         android:ems="10"
@@ -49,6 +50,7 @@
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_login_activity" />
 
