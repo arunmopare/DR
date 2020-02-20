@@ -68,7 +68,7 @@ public class LogIn extends AppCompatActivity {
 
                 if (TextUtils.isEmpty(email)) {
 
-                    //btn_login_login_activit
+                    //btn_login_login_activity
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
                     return;
                 }

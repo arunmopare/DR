@@ -28,7 +28,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/ic_home_black_24dp" />
+                android:oneshot="true"
+                app:srcCompat="@drawable/ic_home_white_24dp" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_format_list_numbered_black_24dp" />
 
             <ImageView
                 android:id="@+id/imageView7"
@@ -54,7 +62,8 @@
         android:layout_marginBottom="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -105,13 +114,13 @@
                         <TextView
                             android:id="@+id/textView4"
                             android:layout_width="match_parent"
-                            android:gravity="center"
-                            android:textColor="@android:color/black"
-                            android:textStyle="bold"
-                            android:onClick="logout"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="LogOut" />
+                            android:gravity="center"
+                            android:onClick="logout"
+                            android:text="LogOut"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -127,12 +136,12 @@
                     android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
                     android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Entries Appearing Here are Realtime"
                     android:textColor="@android:color/holo_red_dark"
-                    android:textStyle="bold"
 
-                    android:text="Entries Appearing Here are Realtime" />
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -154,9 +163,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
                         android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp"
                         android:visibility="gone" />
 
                 </LinearLayout>
@@ -174,10 +183,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="0.5"
-                        android:textColor="@android:color/black"
                         android:gravity="center"
                         android:text="Thirsty Coders"
                         android:textAlignment="center"
+                        android:textColor="@android:color/black"
                         android:textSize="21dp"
                         android:textStyle="bold" />
 
@@ -187,9 +196,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -203,11 +212,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textColor="@android:color/black"
                         android:layout_weight="1"
                         android:text="Thugs Of Codistan"
-
                         android:textAlignment="center"
+
+                        android:textColor="@android:color/black"
                         android:textSize="21dp"
                         android:textStyle="bold" />
 
@@ -217,9 +226,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -233,11 +242,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textColor="@android:color/black"
-
                         android:layout_weight="1"
+
                         android:text="Hackathon"
                         android:textAlignment="center"
+                        android:textColor="@android:color/black"
                         android:textSize="21dp"
                         android:textStyle="bold" />
 
@@ -248,9 +257,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -264,10 +273,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:textColor="@android:color/black"
-
                         android:text="Bug Off"
+
                         android:textAlignment="center"
+                        android:textColor="@android:color/black"
                         android:textSize="21dp"
                         android:textStyle="bold" />
 
@@ -278,9 +287,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -295,11 +304,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textColor="@android:color/black"
-
                         android:layout_weight="1"
+
                         android:text="Hack The Money"
                         android:textAlignment="center"
+                        android:textColor="@android:color/black"
                         android:textSize="21dp"
                         android:textStyle="bold" />
 
@@ -310,9 +319,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -325,11 +334,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textColor="@android:color/black"
-
                         android:layout_weight="1"
+
                         android:text="Beats"
                         android:textAlignment="center"
+                        android:textColor="@android:color/black"
                         android:textSize="21dp"
                         android:textStyle="bold" />
 
@@ -340,16 +349,16 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:background="@drawable/background_cound"
-
                     android:layout_height="match_parent"
+
+                    android:background="@drawable/background_cound"
                     android:orientation="horizontal">
 
                     <TextView
@@ -357,11 +366,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textColor="@android:color/black"
-
                         android:layout_weight="1"
+
                         android:text="Box Office"
                         android:textAlignment="center"
+                        android:textColor="@android:color/black"
                         android:textSize="21dp"
 
                         android:textStyle="bold" />
@@ -373,9 +382,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -388,12 +397,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textColor="@android:color/black"
-
                         android:layout_weight="1"
-                        android:text="Stranger Things"
 
+                        android:text="Stranger Things"
                         android:textAlignment="center"
+
+                        android:textColor="@android:color/black"
                         android:textSize="21dp"
                         android:textStyle="bold" />
 
@@ -405,9 +414,9 @@
                         android:layout_weight="1"
 
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -423,10 +432,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
 
-                        android:textColor="@android:color/black"
                         android:layout_weight="1"
                         android:text="Secret Room"
                         android:textAlignment="center"
+                        android:textColor="@android:color/black"
 
                         android:textSize="21dp"
                         android:textStyle="bold" />
@@ -438,9 +447,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -455,10 +464,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:textColor="@android:color/black"
-
                         android:text="FIFA"
+
                         android:textAlignment="center"
+                        android:textColor="@android:color/black"
                         android:textSize="21dp"
                         android:textStyle="bold" />
 
@@ -469,9 +478,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -501,9 +510,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -530,9 +539,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -549,9 +558,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:text="Bull's Eye"
-                        android:textColor="@android:color/black"
-
                         android:textAlignment="center"
+
+                        android:textColor="@android:color/black"
                         android:textSize="21dp"
                         android:textStyle="bold" />
 
@@ -563,9 +572,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -584,8 +593,7 @@
                         android:textColor="@android:color/black"
 
                         android:textSize="21dp"
-                        android:textStyle="bold"
-                        />
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/count_food_tycon"
@@ -594,9 +602,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -613,8 +621,8 @@
                         android:layout_weight="1"
                         android:text="Twister"
                         android:textAlignment="center"
-                        android:textSize="21dp"
                         android:textColor="@android:color/black"
+                        android:textSize="21dp"
 
                         android:textStyle="bold" />
 
@@ -625,9 +633,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -644,8 +652,8 @@
                         android:layout_weight="1"
                         android:text="Box And Lies"
                         android:textAlignment="center"
-                        android:textSize="21dp"
                         android:textColor="@android:color/black"
+                        android:textSize="21dp"
 
                         android:textStyle="bold" />
 
@@ -656,10 +664,10 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
-
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -688,9 +696,9 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textSize="50dp"
                         android:textAlignment="center"
-                        android:textColor="@android:color/holo_red_dark" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="50dp" />
                 </LinearLayout>
 
 

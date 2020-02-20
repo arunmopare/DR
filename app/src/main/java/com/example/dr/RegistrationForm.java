@@ -61,6 +61,7 @@ public class RegistrationForm extends AppCompatActivity {
         my_name_text = findViewById(R.id.my_name);
         my_mobile_number = findViewById(R.id.my_mobile_number);
 
+
     }
     public void submit_registration(View view){
         final String stringName = my_name_text.getText().toString().trim();
@@ -189,6 +190,10 @@ public class RegistrationForm extends AppCompatActivity {
     }
 
     public void addRegistration(String eventName, String strName,String mobNo){
+        String uid = auth.getUid();
+        my_name_text.getText().clear();
+        my_mobile_number.getText().clear();
+        Toast.makeText(this, "Saved Locally", Toast.LENGTH_SHORT).show();
         databaseRegistration = FirebaseDatabase.getInstance().getReference(eventName);
         databaseRegistrationcount = FirebaseDatabase.getInstance().getReference("Counts");
         String id = databaseRegistration.push().getKey();
@@ -196,9 +201,7 @@ public class RegistrationForm extends AppCompatActivity {
         databaseRegistration.child(id).setValue(registration).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                my_name_text.getText().clear();
-                my_mobile_number.getText().clear();
-                Toast.makeText(RegistrationForm.this, "SuccessFully Registered", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegistrationForm.this, "Uploaded SuccessFully", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
